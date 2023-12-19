@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic tac toe </title>
+</head>
+<style>
+*{
+    background-color: rgb(76, 126, 170);
+}
+h1{
+    text-align: center;
+}
+#ins{
+    font-size:25px;
+    text-align: center;
+    
+}
+.ui{
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+}
+.row { 
+    display: flex; 
+} 
+#but { 
+    width: 100px; 
+    padding: 10px 15px; 
+    margin: 0px 20px; 
+    border-top-right-radius: 10px; 
+    border-bottom-left-radius: 10px; 
+    border-bottom-right-radius: 4px; 
+    border-top-left-radius: 4px; 
+    cursor: pointer; 
+    font-size: 20px; 
+    transition: 0.5s; 
+    color: white; 
+    font-weight: 500; 
+    background-color:purple;
+} 
+.cell { 
+    border:none; 
+    width: 80px; 
+    height: 80px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 24px; 
+    text-align: center; 
+    cursor: pointer; 
+    background-color: rgb(169, 39, 98);
+    color: #a4b726;
+}   
+.cell:active { 
+    outline: none; 
+    background-color: rgb(221, 112, 49);
+} 
+/* 3*3 Grid */
+#b1{ 
+    border-bottom: 3px solid gray; 
+    border-right: 3px solid gray ; 
+} 
+  
+#b2 { 
+    border-bottom: 3px solid gray; 
+    border-right: 3px solid gray; 
+    border-left: 3px solid gray ; 
+} 
+  
+#b3 { 
+    border-bottom: 3px solid gray; 
+    border-left: 3px solid gray; 
+} 
+  
+#b4 { 
+    border-top: 3px solid gray; 
+    border-bottom: 3px solid gray; 
+    border-right: 3px solid gray; 
+} 
+      
+#b5 { 
+    border: 3px solid gray; 
+} 
+  
+#b6 { 
+    border-top: 3px solid gray; 
+    border-bottom: 3px solid gray; 
+    border-left: 3px solid gray; 
+} 
+  
+#b7 { 
+    border-top: 3px solid gray; 
+    border-right: 3px solid gray; 
+} 
+  
+#b8 { 
+    border-top: 3px solid gray; 
+    border-right: 3px solid gray; 
+    border-left: 3px solid gray; 
+} 
+  
+#b9 { 
+    border-top: 3px solid gray; 
+    border-left: 3px solid gray; 
+}
+#print{
+    font-size: 25px;
+    text-align: center;
+
+} 
+#main{
+    text-align: center;
+}
+  
+</style>
+<body>
+    <div id="main"> 
+        <h1><b>TIC TAC TOE</b></h1><br><br>
+        <p id="ins">Rules:<br> 
+              1.Game starts by just Tap on 
+            box<br>2.First Player starts as 
+            <b>Player X </b><br>3.Second Player as  
+            <b>Player 0</b> 
+        </p> 
+        <br><br> 
+        <div class = "ui"> 
+            <div class="row"> 
+                <input type="text" id= "b1" 
+                       class="cell" onclick="myfunc_3(); myfunc();" 
+                       readonly> 
+                <input type="text" id= "b2" 
+                       class="cell" onclick="myfunc_4(); myfunc();" 
+                       readonly> 
+                <input type="text" id= "b3" class="cell" 
+                       onclick="myfunc_5(); myfunc();" 
+                       readonly> 
+            </div> 
+            <div class="row"> 
+                <input type="text" id= "b4" 
+                       class="cell" onclick="myfunc_6(); myfunc();" 
+                       readonly> 
+                <input type="text" id= "b5" 
+                       class="cell" onclick="myfunc_7(); myfunc();" 
+                       readonly> 
+                <input type="text" id= "b6" 
+                       class="cell" onclick="myfunc_8(); myfunc();" 
+                       readonly> 
+            </div> 
+            <div class="row"> 
+                <input type="text" id= "b7" 
+                       class="cell" onclick="myfunc_9(); myfunc();" 
+                       readonly> 
+                <input type="text" id= "b8" 
+                       class="cell" onclick="myfunc_10();myfunc();" 
+                       readonly> 
+                <input type="text" id= "b9" 
+                       class="cell" onclick="myfunc_11();myfunc();" 
+                       readonly> 
+            </div> 
+        </div> 
+        <br><br><br> 
+        
+        <button id="but" onclick="myfunc_2()"> 
+            RESET 
+        </button> 
+        <br><br> 
+        <p id="print"></p> 
+    </div> 
+    <script src="tic tac toe.js"></script>
+    
+</body>
+</html>
